@@ -6,6 +6,7 @@ async function initialize() {
     try {
         Renderer.Initialise();
         ScoreManager.AddListener(Renderer.OnChange);
+        ScoreManager.NotifyListeners();
         Events.Initialise();
     } catch (error) {
         alert(error);

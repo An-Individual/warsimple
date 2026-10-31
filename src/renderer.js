@@ -137,16 +137,16 @@ export class Renderer {
 
         ElementCatalog.currentPrimaryElem.textContent = primary;
         if(primary >= 15) {
-            ElementCatalog.currentPrimaryMaxElem.opacity = 1;
+            ElementCatalog.currentPrimaryMaxElem.style.opacity = 1;
         } else {
-            ElementCatalog.currentPrimaryMaxElem.opacity = 0;
+            ElementCatalog.currentPrimaryMaxElem.style.opacity = 0;
         }
 
         ElementCatalog.currentSecondaryElem.textContent = secondary;
         if(secondary >= 15) {
-            ElementCatalog.currentSecondaryMaxElem.opacity = 1;
+            ElementCatalog.currentSecondaryMaxElem.style.opacity = 1;
         } else {
-            ElementCatalog.currentSecondaryMaxElem.opacity = 0;
+            ElementCatalog.currentSecondaryMaxElem.style.opacity = 0;
         }
     }
 

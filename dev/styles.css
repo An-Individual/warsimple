@@ -146,7 +146,6 @@ html, body {
 .total-side-box-maximum div, .total-main-box-maximum div, .round-score-maximum div {
     background-color: var(--forecol);
     color: var(--backcol);
-    opacity: 0;
 }
 
 .total-side-box-maximum, .total-main-box-maximum, .round-score-maximum {
