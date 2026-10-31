@@ -93,9 +93,9 @@ export class Events {
             let elemArea = ElementCatalog.cpAdjusterElem.getBoundingClientRect();
             let yLoc = e.clientY - elemArea.top;
             if (yLoc < elemArea.height/2) {
-                ScoreManager.IncrementCP(-1);
-            } else {
                 ScoreManager.IncrementCP(1);
+            } else {
+                ScoreManager.IncrementCP(-1);
             }
         }
     }

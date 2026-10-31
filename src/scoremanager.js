@@ -64,7 +64,7 @@ export class ScoreManager {
     }
 
     static LimitsExceeded() {
-        if(ScoreManager.data?.cp && ScoreManager.data.cp < 0) {
+        if(ScoreManager.data?.cp && (ScoreManager.data.cp < 0 || ScoreManager.data.cp > 99)) {
             return true;
         }
 
