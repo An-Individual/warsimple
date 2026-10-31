@@ -12,6 +12,9 @@ export class ScoreManager {
 
     static Initialize() {
         ScoreManager.data = DataManager.LoadData();
+        if(!ScoreManager.data) {
+            ScoreManager.data = {};
+        }
     }
 
     static SetRound(r) {
@@ -74,7 +77,10 @@ export class ScoreManager {
 
         let primaryTotal = 0;
         let secondaryTotal = 0;
-        for(let round in ScoreManager.data.rounds) {
+        for(let round = 1; round <= 6; round++) {
+            if (!ScoreManager.data.rounds[round]) {
+                continue;
+            }
             if(ScoreManager.data.rounds[round].primary < 0) {
                 return true;
             } else if (ScoreManager.data.rounds[round].primary > 15) {
