@@ -212,7 +212,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 6rem;
 }
 
 .round-selector-button {
@@ -250,6 +250,7 @@ html, body {
     container-type: inline-size;
     resize: both;
     width: 50%;
+    margin: 0 1rem;
 }
 
 .round-score-adjuster-current div {
