@@ -86,7 +86,7 @@ export class Renderer {
         let totalPrimary = 0;
         let totalSecondary = 0;
         if(data.rounds) {
-            for(let idx = 1; i <= 6; i++) {
+            for(let idx = 1; idx <= 6; idx++) {
                 if(data.rounds[idx]) {
                     totalPrimary += data.rounds[idx].primary;
                     totalSecondary += data.rounds[idx].secondary;
@@ -152,7 +152,7 @@ export class Renderer {
 
     static UpdateCPValue(data) {
         let cpValue = 0;
-        if(data.cpValue) {
+        if(data.cp) {
             cpValue = data.cp;
         }
 

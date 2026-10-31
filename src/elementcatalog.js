@@ -51,12 +51,15 @@ export class ElementCatalog {
         ElementCatalog.scoreTotalMaxElem = document.getElementById("score-total-maximum");
 
         ElementCatalog.roundTitleElem = document.getElementById("round-title");
+        ElementCatalog.currentPrimaryAdjusterElem = document.getElementById("round-score-adjuster-box-primary");
         ElementCatalog.currentPrimaryElem = document.getElementById("current-primary-value");
         ElementCatalog.currentPrimaryMaxElem = document.getElementById("round-score-maximum-primary");
+        ElementCatalog.currentSecondaryAdjusterElem = document.getElementById("round-score-adjuster-box-secondary");
         ElementCatalog.currentSecondaryElem = document.getElementById("current-secondary-value");
         ElementCatalog.currentSecondaryMaxElem = document.getElementById("round-score-maximum-secondary");
 
         ElementCatalog.cpValueElem = document.getElementById("cp-value");
+        ElementCatalog.cpAdjusterElem = document.getElementById("cp-controller");
 
         ElementCatalog.initialised = true;
     }

@@ -13,6 +13,7 @@ export class Events {
 
         Events.AttachSideRoundSelectorEvents();
         Events.AttachScoreSummaryEvents();
+        Events.AttachArrowEvents();
     }
 
     static AttachSideRoundSelectorEvents() {
@@ -64,6 +65,38 @@ export class Events {
 
         ElementCatalog.roundSummaryElems[6].onclick = function() {
             ScoreManager.SetRound(6);
+        }
+    }
+
+    static AttachArrowEvents() {
+        ElementCatalog.currentPrimaryAdjusterElem.onclick = function(e) {
+            let elemArea = ElementCatalog.currentPrimaryAdjusterElem.getBoundingClientRect();
+            let xLoc = e.clientX - elemArea.left;
+            if (xLoc < elemArea.width/2) {
+                ScoreManager.IncrementPrimary(-1);
+            } else {
+                ScoreManager.IncrementPrimary(1);
+            }
+        }
+
+        ElementCatalog.currentSecondaryAdjusterElem.onclick = function(e) {
+            let elemArea = ElementCatalog.currentSecondaryAdjusterElem.getBoundingClientRect();
+            let xLoc = e.clientX - elemArea.left;
+            if (xLoc < elemArea.width/2) {
+                ScoreManager.IncrementSecondary(-1);
+            } else {
+                ScoreManager.IncrementSecondary(1);
+            }
+        }
+
+        ElementCatalog.cpAdjusterElem.onclick = function(e) {
+            let elemArea = ElementCatalog.cpAdjusterElem.getBoundingClientRect();
+            let yLoc = e.clientY - elemArea.top;
+            if (yLoc < elemArea.height/2) {
+                ScoreManager.IncrementCP(-1);
+            } else {
+                ScoreManager.IncrementCP(1);
+            }
         }
     }
 }
