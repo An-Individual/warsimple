@@ -21,6 +21,7 @@ html, body {
     background-color: var(--backcol);
     border-color: var(--forecol);
     color: var(--forecol);
+    touch-action: pinch-zoom;
 }
 
 .body-block {
