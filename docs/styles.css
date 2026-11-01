@@ -26,6 +26,29 @@ html, body {
     color: var(--forecol);
 }
 
+/*
+This is a duplicate of a fix for iOS PWA blurring of the top
+bar copied from https://github.com/HKUDS/nanobot/pull/5942. I
+bumped into it in a few places, but this is the one that
+provided the clearest explanation of what it does and why.
+*/
+.pwa-status-bar-surface { display: none; }
+@supports (-webkit-touch-callout: none) and (background-clip: text) {
+    @media (display-mode: standalone) {
+        .pwa-status-bar-surface {
+            display: block;
+            position: fixed;
+            inset: 0 0 auto;
+            height: 11px; /* Must exceed WebKit's 10px thin-border threshold. */
+            z-index: 100;
+            pointer-events: none;
+            background-color: inherit;
+            -webkit-background-clip: text;
+            background-clip: text; /* Empty text paints nothing over the controls. */
+        }
+    }
+}
+
 .body-block {
     max-width: 600px;
     height: 100%;
