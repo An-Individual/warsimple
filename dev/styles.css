@@ -53,6 +53,10 @@ html, body {
     border-color: var(--forecol);
 }
 
+a, a:hover {
+    color: var(--numcol);
+}
+
 .container-block {
     clear: both;
 }
@@ -72,6 +76,7 @@ html, body {
     padding: 0.2rem;
     margin: 0.2rem;
     cursor: pointer;
+    width: 5.1rem;
 }
 
 #score-overall {
@@ -332,7 +337,7 @@ html, body {
     background-color: var(--backcol);
 }
 
-#new-game-menu {
+#new-game-menu, #about-menu {
     display: none;
 }
 
@@ -365,7 +370,7 @@ html, body {
     padding: 0.5rem;
 }
 
-.new-game-title {
+.modal-title {
     font-size: 15cqw;
 }
 
@@ -383,4 +388,13 @@ html, body {
     color: var(--numcol);
     border-color: var(--forecol);
     cursor: pointer;
+}
+
+.about-qr-code {
+    width: 70%;
+}
+
+.about-paragraph {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
 }

@@ -66,6 +66,10 @@ export class ElementCatalog {
         ElementCatalog.newGameMenuElem = document.getElementById("new-game-menu");
         ElementCatalog.newGameYesElem = document.getElementById("button-ng-yes");
         ElementCatalog.newGameNoElem = document.getElementById("button-ng-no");
+        ElementCatalog.aboutButtonElem = document.getElementById("button-about");
+        ElementCatalog.aboutMenuElem = document.getElementById("about-menu");
+        ElementCatalog.aboutCopyElem = document.getElementById("button-about-copy");
+        ElementCatalog.aboutCloseElem = document.getElementById("button-about-close");
 
         ElementCatalog.initialised = true;
     }

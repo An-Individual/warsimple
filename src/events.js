@@ -15,6 +15,7 @@ export class Events {
         Events.AttachScoreSummaryEvents();
         Events.AttachArrowEvents();
         Events.AttachNewGameEvents();
+        Events.AttachAboutEvents();
     }
 
     static AttachSideRoundSelectorEvents() {
@@ -117,5 +118,27 @@ export class Events {
             ElementCatalog.modalOverlayElem.style.display = "none";
             ElementCatalog.newGameMenuElem.style.display = "none";
         }
+    }
+
+    static AttachAboutEvents() {
+        ElementCatalog.aboutButtonElem.onclick = function() {
+            ElementCatalog.aboutCopyElem.textContent = "Copy to Clipboard";
+            ElementCatalog.modalOverlayElem.style.display = "block";
+            ElementCatalog.aboutMenuElem.style.display = "block";
+        }
+
+        ElementCatalog.aboutCopyElem.onclick = function() {
+            navigator.clipboard.writeText("https://an-individual.github.io/warsimple");
+            ElementCatalog.aboutCopyElem.textContent = "Copied";
+        }
+
+        ElementCatalog.aboutCloseElem.onclick = function() {
+            ElementCatalog.modalOverlayElem.style.display = "none";
+            ElementCatalog.aboutMenuElem.style.display = "none";
+        }
+    }
+
+    static CopyTextToClipboard(text) {
+
     }
 }

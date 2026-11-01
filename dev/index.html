@@ -20,7 +20,7 @@
     <body>
         <div class="body-block">
             <div class="container-block" id="top-menu">
-                <div class="menu-button" id="button-settings">Settings</div>
+                <div class="menu-button" id="button-about">About</div>
                 <div class="menu-title">War Simple</div>
                 <div class="menu-button" id="button-newgame">New Game</div>
             </div>
@@ -157,10 +157,30 @@
             <div class="modal-menu" id="new-game-menu">
                 <div class="modal-centering">
                     <div class="modal-box">
-                        <div class="new-game-title">New Game</div>
+                        <div class="modal-title">New Game</div>
                         <div class="new-game-question">Are you sure?</div>
                         <div class="button-ng" id="button-ng-yes">Yes</div>
                         <div class="button-ng" id="button-ng-no">No</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-menu" id="about-menu">
+                <div class="modal-centering">
+                    <div class="modal-box">
+                        <div class="modal-title">About</div>
+                        <div class="about-paragraph">
+                            War Simple is a basic score tracker for Warhammer 40k 11th Edition.
+                            It is intended to run as a Progressive Web App (PWA) on a phone.
+                            For an app-like experience, and to use it offline, open it on your 
+                            phone and add it to your home screen.
+                        </div>
+                        <div class="about-paragraph">
+                            The full code is available on <a href="https://github.com/An-Individual/warsimple" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                            Links to the app are available below.
+                        </div>
+                        <img class="about-qr-code" src="images/qrcode.svg">
+                        <div class="button-ng" id="button-about-copy">Copy to Clipboard</div>
+                        <div class="button-ng" id="button-about-close">Close</div>
                     </div>
                 </div>
             </div>
