@@ -14,6 +14,7 @@ export class Events {
         Events.AttachSideRoundSelectorEvents();
         Events.AttachScoreSummaryEvents();
         Events.AttachArrowEvents();
+        Events.AttachNewGameEvents();
     }
 
     static AttachSideRoundSelectorEvents() {
@@ -97,6 +98,24 @@ export class Events {
             } else {
                 ScoreManager.IncrementCP(-1);
             }
+        }
+    }
+
+    static AttachNewGameEvents() {
+        ElementCatalog.newGameButtonElem.onclick = function() {
+            ElementCatalog.modalOverlayElem.style.display = "block";
+            ElementCatalog.newGameMenuElem.style.display = "block";
+        }
+
+        ElementCatalog.newGameYesElem.onclick = function() {
+            ScoreManager.ClearData();
+            ElementCatalog.modalOverlayElem.style.display = "none";
+            ElementCatalog.newGameMenuElem.style.display = "none";
+        }
+
+        ElementCatalog.newGameNoElem.onclick = function() {
+            ElementCatalog.modalOverlayElem.style.display = "none";
+            ElementCatalog.newGameMenuElem.style.display = "none";
         }
     }
 }

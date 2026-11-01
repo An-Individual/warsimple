@@ -319,3 +319,68 @@ html, body {
     width: 100%;
     height: 100%;
 }
+
+#modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: var(--backcol);
+}
+
+#new-game-menu {
+    display: none;
+}
+
+.modal-menu {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-centering {
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.modal-box {
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--forecol);
+    background-color: var(--backcol);
+    margin: 0 10%;
+    container-type: inline-size;
+    padding: 0.5rem;
+}
+
+.new-game-title {
+    font-size: 15cqw;
+}
+
+.new-game-question {
+    font-size: 7cqw;
+}
+
+.button-ng {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5cqw;
+    font-size: 10cqw;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.2rem;
+    color: var(--numcol);
+    border-color: var(--forecol);
+    cursor: pointer;
+}

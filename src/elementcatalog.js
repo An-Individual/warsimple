@@ -61,6 +61,12 @@ export class ElementCatalog {
         ElementCatalog.cpValueElem = document.getElementById("cp-value");
         ElementCatalog.cpAdjusterElem = document.getElementById("cp-controller");
 
+        ElementCatalog.newGameButtonElem = document.getElementById("button-newgame");
+        ElementCatalog.modalOverlayElem = document.getElementById("modal-overlay");
+        ElementCatalog.newGameMenuElem = document.getElementById("new-game-menu");
+        ElementCatalog.newGameYesElem = document.getElementById("button-ng-yes");
+        ElementCatalog.newGameNoElem = document.getElementById("button-ng-no");
+
         ElementCatalog.initialised = true;
     }
 }
