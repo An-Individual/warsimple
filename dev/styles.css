@@ -2,6 +2,7 @@
     --backcol: #131c16;
     --forecol: #a0b38e;
     --forecolfilter: invert(73%) sepia(13%) saturate(538%) hue-rotate(48deg) brightness(94%) contrast(88%);
+    --numcol: #ededed;
 }
 
 *, *::before, *::after {
@@ -39,6 +40,17 @@ html, body {
     .body-block {
         border-width: 0px;
     }
+}
+
+.score-perround-title, 
+.score-perround-value,
+.total-side-box-value,
+.total-main-box-value,
+.round-selector-button,
+.round-score-adjuster-current,
+#cp-value {
+    color: var(--numcol);
+    border-color: var(--forecol);
 }
 
 .container-block {
