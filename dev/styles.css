@@ -49,21 +49,6 @@ provided the clearest explanation of what it does and why.
     }
 }
 
-/*
-These two are part of trying to prevent rotation in iOS since
-it ignores the orientation property in the manifest. They come
-from: https://stackoverflow.com/questions/5298467/prevent-orientation-change-in-ios-safari
-*/
-.orientleft #shell {
-    -webkit-transform: rotate(-90deg);
-    -webkit-transform-origin:160px 160px;
-}
-
-.orientright #shell {
-    -webkit-transform: rotate(90deg);
-    -webkit-transform-origin:230px 230px;
-}
-
 .body-block {
     max-width: 600px;
     height: 100%;
