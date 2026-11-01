@@ -20,3 +20,18 @@ async function initialize() {
 document.addEventListener("DOMContentLoaded", async (event) => {
 	await initialize();
 });
+
+// Attempt to lock the orientation because iOS will ignore
+// the manifest's attempt to stop it. Solution from
+// https://stackoverflow.com/questions/5298467/prevent-orientation-change-in-ios-safari.
+window.addEventListener('orientationchange', function () {
+    if (window.orientation == -90) {
+        document.getElementById('orient').className = 'orientright';
+    }
+    if (window.orientation == 90) {
+        document.getElementById('orient').className = 'orientleft';
+    }
+    if (window.orientation == 0) {
+        document.getElementById('orient').className = '';
+    }
+}, true);
