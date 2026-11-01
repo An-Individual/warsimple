@@ -1,0 +1,14 @@
+{
+    "name": "War Simple",
+    "description": "A simple score tracker for the 11th edtion of Warhammer 40k.",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "background_color": "#131c16",
+    "icons": [
+        {
+            "src": "images/icon.svg",
+            "sizes": "any",
+            "type": "image/svg"
+        }
+    ]
+}

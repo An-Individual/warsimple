@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>War Simple</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-title" content="War Simple">
+        <meta name="description" content="A simple score tracker for Warhammer 40k 11th Edition.">
+
+		<meta property="og:title" content="War Simple">
+		<meta property="og:description" content="A simple score tracker for Warhammer 40k 11th Edition.">
+		<meta property="og:url" content="https://an-individual.github.io/warsimple">
+		<meta property="og:image" content="https://an-individual.github.io/warsimple/images/socialcard.png">
+		<meta name="twitter:card" content="summary">
+
+        <link rel="icon" type="image/svg+xml" href="images/icon.svg" sizes="any">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="manifest" href="manifest.json">
+        <script src="warsimple.js"></script>
+    </head>
+    <body>
+        <div class="body-block">
+            <div class="container-block" id="top-menu">
+                <div class="menu-button" id="button-about">About</div>
+                <div class="menu-title">War Simple</div>
+                <div class="menu-button" id="button-newgame">New Game</div>
+            </div>
+            <div class="container-block" id="score-overall">
+                <div id="score-perround">
+                    <div class="score-perround-box" id="score-box-one">
+                        <div class="score-perround-title round-selected" id="title-round-one">1</div>
+                        <div class="score-perround-value" id="score-round-one">
+                            <div class="score-preround-primary">+0</div>
+                            <div class="score-preround-secondary">+0</div>
+                        </div>
+                    </div>
+                    <div class="score-perround-box" id="score-box-two">
+                        <div class="score-perround-title" id="title-round-two">2</div>
+                        <div class="score-perround-value" id="score-round-two">
+                            <div class="score-preround-primary">+0</div>
+                            <div class="score-preround-secondary">+0</div>
+                        </div>
+                    </div>
+                    <div class="score-perround-box" id="score-box-three">
+                        <div class="score-perround-title" id="title-round-three">3</div>
+                        <div class="score-perround-value" id="score-round-three">
+                            <div class="score-preround-primary">+0</div>
+                            <div class="score-preround-secondary">+0</div>
+                        </div>
+                    </div>
+                    <div class="score-perround-box" id="score-box-four">
+                        <div class="score-perround-title" id="title-round-four">4</div>
+                        <div class="score-perround-value" id="score-round-four">
+                            <div class="score-preround-primary">+0</div>
+                            <div class="score-preround-secondary">+0</div>
+                        </div>
+                    </div>
+                    <div class="score-perround-box" id="score-box-five">
+                        <div class="score-perround-title" id="title-round-five">5</div>
+                        <div class="score-perround-value" id="score-round-five">
+                            <div class="score-preround-primary">+0</div>
+                            <div class="score-preround-secondary">+0</div>
+                        </div>
+                    </div>
+                    <div class="score-perround-box" id="score-box-end">
+                        <div class="score-perround-title" id="title-round-end">E</div>
+                        <div class="score-perround-value" id="score-round-end">
+                            <div class="score-preround-primary">+0</div>
+                            <div class="score-preround-secondary">+0</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="score-totals-box">
+                    <div class="total-box total-side-box">
+                        <div class="total-side-box-title">Primary</div>
+                        <div class="total-side-box-value" id="score-total-primary">0</div>
+                        <div class="total-side-box-maximum" id="score-total-primary-maximum">
+                            <div>Maximum</div>
+                        </div>
+                    </div>
+                    <div class="total-box total-main-box">
+                        <div class="total-main-box-title">Total</div>
+                        <div class="total-main-box-value" id="score-total-value">0</div>
+                        <div class="total-main-box-maximum" id="score-total-maximum">
+                            <div>Maximum</div>
+                        </div>
+                    </div>
+                    <div class="total-box total-side-box">
+                        <div class="total-side-box-title">Secondary</div>
+                        <div class="total-side-box-value" id="score-total-secondary">0</div>
+                        <div class="total-side-box-maximum" id="score-total-secondary-maximum">
+                            <div>Maximum</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-block round-score-box">
+                <div class="round-score-sidebox">
+                    <div class="side-box-title">Round</div>
+                    <div class="round-selector-button round-selected" id="button-select-round-one">1</div>
+                    <div class="round-selector-button" id="button-select-round-two">2</div>
+                    <div class="round-selector-button" id="button-select-round-three">3</div>
+                    <div class="round-selector-button" id="button-select-round-four">4</div>
+                    <div class="round-selector-button" id="button-select-round-five">5</div>
+                    <div class="round-selector-button" id="button-select-round-end">E</div>
+                </div>
+                <div class="round-score-mainbox">
+                    <div id="round-title">Round 1</div>
+                    <div class="round-score-type-box">
+                        <div class="round-score-title">Primary</div>
+                        <div class="round-score-adjuster-box" id="round-score-adjuster-box-primary">
+                            <div class="round-score-decrement-button" id="button-primarydown">
+                                <img src="images/arrow.svg">
+                            </div>
+                            <div class="round-score-adjuster-current">
+                                <div id="current-primary-value">0</div>
+                            </div>
+                            <div class="round-score-increment-button" id="button-primaryup">
+                                <img src="images/arrow.svg">
+                            </div>
+                        </div>
+                        <div class="round-score-maximum" id="round-score-maximum-primary">
+                            <div>Maximum</div>
+                        </div>
+                    </div>
+                    <div class="round-score-type-box">
+                        <div class="round-score-title">Secondary</div>
+                        <div class="round-score-adjuster-box" id="round-score-adjuster-box-secondary">
+                            <div class="round-score-decrement-button" id="button-secondarydown">
+                                <img src="images/arrow.svg">
+                            </div>
+                            <div class="round-score-adjuster-current">
+                                <div id="current-secondary-value">0</div>
+                            </div>
+                            <div class="round-score-increment-button" id="button-secondaryup">
+                                <img src="images/arrow.svg">
+                            </div>
+                        </div>
+                        <div class="round-score-maximum" id="round-score-maximum-secondary">
+                            <div>Maximum</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="round-score-sidebox">
+                    <div class="side-box-title">CP</div>
+                    <div id="cp-controller">
+                        <div id="button-cp-up">
+                            <img src="images/arrow-vert.svg">
+                        </div>
+                        <div id="cp-value">0</div>
+                        <div id="button-cp-down">
+                            <img src="images/arrow-vert.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-overlay"></div>
+            <div class="modal-menu" id="new-game-menu">
+                <div class="modal-centering">
+                    <div class="modal-box">
+                        <div class="modal-title">New Game</div>
+                        <div class="new-game-question">Are you sure?</div>
+                        <div class="button-ng" id="button-ng-yes">Yes</div>
+                        <div class="button-ng" id="button-ng-no">No</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-menu" id="about-menu">
+                <div class="modal-centering">
+                    <div class="modal-box">
+                        <div class="modal-title">About</div>
+                        <div class="about-paragraph">
+                            War Simple is a basic score tracker for Warhammer 40k 11th Edition.
+                            It is intended to run as a Progressive Web App (PWA) on a phone.
+                            For an app-like experience, and to use it offline, open it on your 
+                            phone and add it to your home screen.
+                        </div>
+                        <div class="about-paragraph">
+                            The full code is available on <a href="https://github.com/An-Individual/warsimple" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                            Links to the app are available below.
+                        </div>
+                        <img class="about-qr-code" src="images/qrcode.svg">
+                        <div class="button-ng" id="button-about-copy">Copy to Clipboard</div>
+                        <div class="button-ng" id="button-about-close">Close</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
